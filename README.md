@@ -1,38 +1,42 @@
-# ⚡ Premium Personal Portfolio Website
+# ⚡ morgan.sys — Digital Identity System
 
-A stunning, responsive, and high-performance **Personal Portfolio Website** built entirely with modern **Vanilla HTML5, CSS3, and ES6+ JavaScript**. Designed with a premium Apple/Stripe-like glassmorphic aesthetic, OKLCH/HSL design system tokens, and cutting-edge native CSS scroll-driven animations.
+A restrained, emotionally intelligent, and founder-grade **Digital Identity System** built with pure **Vanilla HTML5, CSS3, and ES6+ JavaScript**. Sitting at the intersection of Stripe, Linear, Vercel, and Apple product storytelling, this interface prioritizes silence, controlled asymmetry, and physical stability over standard portfolio templates.
 
 ---
 
-## 🎨 Visual Preview
+## 🎨 Visual Composition
 
-### Profile Avatar & Dashboard Mockups
+### Profile & Systems Telemetry
 <p align="center">
-  <img src="assets/avatar.png" width="220" alt="Developer Avatar" style="border-radius: 50%; margin: 10px;" />
+  <img src="assets/avatar.png" width="200" alt="Identity Portrait" style="border-radius: 50%; border: 1px solid rgba(255,255,255,0.04); padding: 4px; background: #0B0D12; margin: 10px;" />
 </p>
 
 <p align="center">
-  <img src="assets/project-1.png" width="280" alt="Quantum Analytics Mockup" style="border-radius: 12px; margin: 5px;" />
-  <img src="assets/project-2.png" width="280" alt="TaskFlow Canvas Mockup" style="border-radius: 12px; margin: 5px;" />
-  <img src="assets/project-3.png" width="280" alt="HomeIQ Control Hub Mockup" style="border-radius: 12px; margin: 5px;" />
+  <img src="assets/project-1.png" width="280" alt="Quantum Analytics Briefing" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.04); margin: 5px;" />
+  <img src="assets/project-2.png" width="280" alt="TaskFlow Canvas Briefing" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.04); margin: 5px;" />
+  <img src="assets/project-3.png" width="280" alt="HomeIQ Hub Briefing" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.04); margin: 5px;" />
 </p>
 
 ---
 
-## 🚀 Key Features
+## 🚀 Architectural Principles
 
-* **💎 Apple-Grade Aesthetics**: Modern glassmorphic cards (`backdrop-filter`), slow-floating ambient neon glow spheres, premium typography, and subtle micro-animations for interactive engagement.
-* **🌓 Dual-State Theme System**: A physical sliding sun/moon theme selector that syncs with `localStorage` and listens live to system `prefers-color-scheme` overrides.
-* **⚡ FOUC Prevention**: Inline blocking theme parser in `<head>` completely eliminates the Flash of Unstyled Content (FOUC), ensuring a seamless dark/light page load.
-* **🌀 CSS Scroll-Driven Animations**: Leverages native CSS `@keyframes` bound to anonymous `view()` timelines for high-performance scroll port entrance scaling and reveals.
-* **🍂 Progressive Observer Fallback**: Automatically feature-detects scroll timeline support via `CSS.supports()`. Browsers lacking support (older Safari/Firefox) degrade gracefully using a fast `IntersectionObserver` script.
-* **🧭 Real-Time Nav Tracking**: Intersection observers track your page scrolls to dynamically highlight links on the sticky glassmorphic navigation header in real-time.
-* **📝 Floating Contact Form**: Features sliding animated label inputs, native CSS `:user-invalid` validations, submitting spinner states, and simulated Formspree response toasts.
-* **📄 Downloadable Resume**: Out-of-the-box support for resume downloads with a pre-packaged standard-compliant PDF document.
+* **🤫 Sparing Serif Contrast**: `Instrument Serif` is restricted strictly to hero declarations and key editorial headers, leaving the main navigation, interactive controls, tags, and data descriptions in modern, minimal sans-serif (`Inter`) for crisp UI legibility.
+* **📏 Controlled Asymmetry**: Replaces symmetrical desktop grids with offset columns, mixed content widths, and deliberate whitespace imbalances that give sections immense breathing room.
+* **🧱 Physical Stability**: Replaces floating random components and high-energy animation decoration with anchored, flat layout blocks, subtle panel elevations, and ultra-thin, silent micro-borders (`1px solid rgba(255, 255, 255, 0.04)`).
+* **🕵️ Signal-Intelligent Pacing**: Navigated by a structured numbered directory that quietly implies internet-native taste:
+  * `01 / System` (Hero/Intro)
+  * `02 / Philosophy` (Approach/Systems)
+  * `03 / Builds` (Architectures/Projects)
+  * `04 / Intel` (Capabilities/Technical Depth)
+  * `05 / Connect` (Secure Routing Gateway)
+* **📑 Intelligence Briefings**: Projects are structured as rigorous product teardowns rather than shallow generic cards, detailing **Intent**, **Infrastructure**, **Perception**, and **Outcome**.
+* **🌓 Silent Theme Persistency**: A minimal, sliding sun/moon theme selector that syncs with `localStorage` and listens live to system `prefers-color-scheme` preferences. Includes an inline blocking theme injector in the `<head>` to prevent the Flash of Unstyled Content (FOUC).
+* **🍂 Near-Invisible Motion**: Focuses on atmospheric, physically aware transitions. Replaces bouncy visual effects with very slow, quiet fades and fine vertical shifts that support depth without drawing attention.
 
 ---
 
-## 📂 Project Structure
+## 📂 System Map
 
 ```text
 personal-portfolio/
@@ -52,7 +56,7 @@ personal-portfolio/
 
 ## 🛠️ Local Development
 
-Getting the portfolio running on your local machine is extremely simple since it doesn't require complex bundlers or build steps.
+Running this digital identity locally is extremely fast since it operates on pure, uncompiled static standards.
 
 1. **Clone the repository**:
    ```bash
@@ -60,8 +64,7 @@ Getting the portfolio running on your local machine is extremely simple since it
    cd portfolio
    ```
 
-2. **Run a static local server**:
-   You can use standard tooling like Python, Node, or simply open `index.html` in your favorite web browser.
+2. **Run a static server**:
    
    *Using Node.js (`http-server`)*:
    ```bash
@@ -79,7 +82,7 @@ Getting the portfolio running on your local machine is extremely simple since it
 
 ## 🌐 Production Deployment
 
-Since this project consists of static files, it is **incredibly fast** and can be hosted for **free** on any static hosting provider.
+This project consists of static files and is optimized for sub-100ms loading speeds.
 
 ### GitHub Pages
 1. Go to your repository settings on GitHub.
