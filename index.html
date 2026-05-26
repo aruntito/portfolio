@@ -3,562 +3,444 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Morgan | Lead Software Engineer & Creative Designer</title>
+  <title>Alex Morgan | Systems, Automation, Branding, & Growth</title>
   
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Professional portfolio of Alex Morgan, a Lead Software Engineer and Creative Designer specializing in building high-performance web applications, interactive visual platforms, and elegant digital products.">
-  <meta name="keywords" content="Alex Morgan, Software Engineer, Portfolio, Frontend Developer, Creative Tech, UI UX, Next.js, React, CSS Animations">
+  <!-- SEO & Perception Meta -->
+  <meta name="description" content="Founder-grade digital identity of Alex Morgan. Specializing in internet growth systems, digital product architecture, automation, and visual perception.">
+  <meta name="keywords" content="Alex Morgan, Systems Architect, Product Engineering, Brand Strategy, Technical Automation, Digital Growth">
   <meta name="author" content="Alex Morgan">
   <meta name="robots" content="index, follow">
   
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://alexmorgan.dev/">
-  <meta property="og:title" content="Alex Morgan | Lead Software Engineer & Creative Designer">
-  <meta property="og:description" content="Explore Alex Morgan's creative developer portfolio, featuring high-performance dashboards, visual collaboration boards, and custom digital designs.">
+  <meta property="og:title" content="Alex Morgan | Systems, Automation, Branding, & Growth">
+  <meta property="og:description" content="I build internet products people actually feel. High-performance software engineering combined with rigorous brand systems thinking.">
   <meta property="og:image" content="assets/avatar.png">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://alexmorgan.dev/">
-  <meta property="twitter:title" content="Alex Morgan | Lead Software Engineer & Creative Designer">
-  <meta property="twitter:description" content="Explore Alex Morgan's creative developer portfolio, featuring high-performance dashboards, visual collaboration boards, and custom digital designs.">
-  <meta property="twitter:image" content="assets/avatar.png">
-
-  <!-- Google Fonts -->
+  <!-- Typography: Instrument Serif for Selective Contrast, Inter for Modern UI -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
-  <!-- Favicon Mock -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-  <!-- Theme Meta and Inline Injection to completely block FOUC -->
-  <meta name="color-scheme" content="light dark">
+  <!-- FOUC Prevention Script -->
+  <meta name="color-scheme" content="dark light">
   <script>
     {
-      const savedTheme = localStorage.getItem("color-scheme");
-      if (savedTheme) {
-        document.querySelector('meta[name="color-scheme"]').content = savedTheme;
-        document.documentElement.setAttribute('data-theme', savedTheme);
-      }
+      const theme = localStorage.getItem("color-scheme") || "dark";
+      document.querySelector('meta[name="color-scheme"]').content = theme === "dark" ? "dark" : "light dark";
+      document.documentElement.setAttribute('data-theme', theme);
     }
   </script>
 
-  <!-- External Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Background Ambient Glow Shapes -->
-  <div class="ambient-glow" aria-hidden="true">
-    <div class="glow-sphere glow-1"></div>
-    <div class="glow-sphere glow-2"></div>
-  </div>
-
-  <!-- Header & Navigation -->
+  <!-- Quiet Sticky Header -->
   <header class="header">
-    <div class="container nav-container">
-      <a href="#home" class="logo" aria-label="Alex Morgan Home">
+    <div class="nav-wrapper">
+      <a href="#home" class="logo" aria-label="Alex Morgan">
         <span class="logo-icon">⚡</span>
-        <span class="logo-text">Alex.dev</span>
+        <span class="logo-text">morgan.sys</span>
       </a>
 
-      <nav class="main-nav" aria-label="Main Navigation">
+      <nav class="main-nav" aria-label="Systems Directory">
         <ul class="nav-list">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#home" class="nav-link active">01 / System</a></li>
+          <li><a href="#about" class="nav-link">02 / Philosophy</a></li>
+          <li><a href="#projects" class="nav-link">03 / Builds</a></li>
+          <li><a href="#skills" class="nav-link">04 / Intel</a></li>
+          <li><a href="#contact" class="nav-link">05 / Connect</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <!-- Physical Two-State Theme Toggle -->
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle Theme">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-          </svg>
-          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-          </svg>
-          <span class="toggle-slider"></span>
-        </button>
-
-        <!-- Mobile Nav Hamburger Toggle -->
-        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+        <!-- Tactile Slide Switch -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme" title="Toggle Theme">
+          <span class="toggle-track"></span>
+          <span class="toggle-thumb"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Main Content Wrapper -->
-  <main>
+  <!-- Central Workspace -->
+  <main class="main-content">
 
-    <!-- Hero Section (Home) -->
+    <!-- 01 / System (Hero) -->
     <section id="home" class="hero-section">
-      <div class="container hero-container">
-        <div class="hero-text-content">
-          <div class="badge-new-role">
-            <span class="badge-pulse"></span>
-            Open to exciting roles & collaborations
-          </div>
-          <h1 class="hero-title">
-            Crafting <span class="gradient-text">Premium</span> Digital Interfaces & Web Experiences
+      <div class="hero-layout container">
+        <div class="hero-body">
+          <div class="hero-tag">Digital Systems Architect & Operator</div>
+          <h1 class="hero-title font-serif">
+            Systems, automation, <br>branding, and growth.
           </h1>
-          <p class="hero-subtitle">
-            I am Alex Morgan, a Lead Software Engineer combining deep architectural engineering with pixel-perfect creative design to build fast, beautiful web apps.
+          <p class="hero-statement">
+            I build internet products people actually feel.
           </p>
-          <div class="hero-ctas">
-            <a href="#projects" class="btn btn-primary">
-              Explore Projects
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+          <p class="hero-description">
+            Designing interfaces, engineering telemetry, and structuring digital systems. I work at the intersection of visual perception and production code to push internet products forward.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="action-btn btn-primary">
+              View Architectures
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-arrow">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            <a href="#contact" class="action-btn btn-secondary">Get in Touch</a>
           </div>
         </div>
-        <div class="hero-visual-content">
-          <div class="avatar-glow-ring">
-            <img src="assets/avatar.png" alt="Alex Morgan Portrait" class="hero-avatar">
+        <div class="hero-asymmetric-graphic">
+          <div class="avatar-container">
+            <img src="assets/avatar.png" alt="Portrait illustration" class="avatar-img" loading="eager">
           </div>
         </div>
-      </div>
-      <div class="scroll-indicator-wrapper">
-        <a href="#about" class="scroll-indicator" aria-label="Scroll to About Section">
-          <span class="mouse-wheel"></span>
-        </a>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
+    <!-- 02 / Philosophy (About/Systems Approach) -->
+    <section id="about" class="philosophy-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tagline">About Me</span>
-          <h2 class="section-title">The Engineering & Creative Mind</h2>
-          <div class="divider"></div>
+        <div class="asymmetric-header">
+          <span class="section-num">02 / Philosophy</span>
+          <h2 class="section-title font-serif">Building with Quiet Intent</h2>
+          <p class="section-intro">
+            A developer portfolio shouldn't sell freelance contracts. It should demonstrate structural intelligence, product psychology, and the discipline of execution.
+          </p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-bio">
-            <p class="lead-text">
-              I specialize in bridging the gap between design and solid software architecture. Over the last six years, I've engineered products ranging from dynamic graphical dashboards to large-scale collaborative SaaS applications.
+        <div class="philosophy-columns">
+          <div class="philosophy-card">
+            <div class="card-index">02.1</div>
+            <h3 class="card-heading">Perception</h3>
+            <p class="card-text">
+              Design is not aesthetic decoration. It is cognitive control. Visual systems require balanced grids, controlled typography hierarchies, and intentional spatial rhythm to direct user perception and command trust.
             </p>
-            <p>
-              My approach focuses heavily on performance (optimizing Core Web Vitals), strict semantic accessibility, and clean, scalable code architecture. I believe that digital platforms should not only function reliably but also inspire and delight the users interactively.
+          </div>
+
+          <div class="philosophy-card">
+            <div class="card-index">02.2</div>
+            <h3 class="card-heading">Architecture</h3>
+            <p class="card-text">
+              Premium interfaces demand stable code. By writing semantic, lightweight HTML, optimizing CSS performance margins, and implementing physics-aware micro-interactions, digital experiences feel anchored, fast, and secure.
             </p>
-            <div class="about-actions">
-              <a href="assets/resume.pdf" class="btn btn-primary btn-download" download="Alex_Morgan_Resume.pdf" id="download-resume-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-                </svg>
-                Download Resume
-              </a>
-            </div>
           </div>
 
-          <div class="about-stats">
-            <div class="stat-card glass-panel">
-              <span class="stat-number">6+</span>
-              <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat-card glass-panel">
-              <span class="stat-number">40+</span>
-              <span class="stat-label">Projects Completed</span>
-            </div>
-            <div class="stat-card glass-panel">
-              <span class="stat-number">99%</span>
-              <span class="stat-label">Customer Satisfaction</span>
-            </div>
-            <div class="stat-card glass-panel">
-              <span class="stat-number">10M+</span>
-              <span class="stat-label">User Interactions</span>
-            </div>
+          <div class="philosophy-card">
+            <div class="card-index">02.3</div>
+            <h3 class="card-heading">Automation</h3>
+            <p class="card-text">
+              Manual workflows are system debt. Standardizing telemetry pipelines, maintaining structured build cycles, and automating growth engines ensures maximum velocity and scalability for modern internet-native products.
+            </p>
           </div>
+        </div>
+
+        <div class="philosophy-meta-action">
+          <a href="assets/resume.pdf" class="btn-text-link" download="Alex_Morgan_Resume.pdf" id="download-resume-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="download-icon">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download Systems Resume
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <!-- 03 / Builds (Projects Reworked as Intelligence Briefings) -->
+    <section id="projects" class="builds-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tagline">My Work</span>
-          <h2 class="section-title">Selected Masterpieces</h2>
-          <div class="divider"></div>
+        <div class="asymmetric-header">
+          <span class="section-num">03 / Builds</span>
+          <h2 class="section-title font-serif">Selected Architectures</h2>
+          <p class="section-intro">
+            A teardown of living systems designed to support scale, metrics analysis, and high-status digital product layouts.
+          </p>
         </div>
 
-        <div class="projects-grid">
-          <!-- Project Card 1 -->
-          <article class="project-card glass-panel">
-            <div class="project-image-wrapper">
-              <img src="assets/project-1.png" alt="Quantum Analytics Dashboard Screenshot" class="project-image" loading="lazy">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="#" class="project-link-btn" aria-label="View Github Code">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-                      <path d="M9 18c-4.51 2-5-2-7-2"/>
-                    </svg>
-                  </a>
-                  <a href="#" class="project-link-btn" aria-label="Launch Live Site">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/>
-                    </svg>
-                  </a>
+        <div class="briefings-list">
+          
+          <!-- Intelligence Briefing 1 -->
+          <article class="briefing-item">
+            <div class="briefing-meta">
+              <div class="briefing-num">03.1 / Platform</div>
+              <h3 class="briefing-title">Quantum Analytics</h3>
+              <p class="briefing-subtitle">E-Commerce Telemetry Engine</p>
+              
+              <div class="briefing-details">
+                <div class="detail-row">
+                  <span class="detail-label">Intent</span>
+                  <span class="detail-value">Standardize client-side telemetry across high-throughput web transactions.</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Infrastructure</span>
+                  <span class="detail-value">Pure performance pipeline, custom charting widgets, dynamic memory lifecycle.</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Perception</span>
+                  <span class="detail-value">Muted, dark-first, data-dense dashboards engineered to minimize operator fatigue.</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Outcome</span>
+                  <span class="detail-value">60% latency reduction in user interaction latency; $120M+ volume tracked.</span>
                 </div>
               </div>
             </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">HTML5/CSS3</span>
-                <span class="project-tag">ES6+ JS</span>
-                <span class="project-tag">WebCharts</span>
-              </div>
-              <h3 class="project-card-title">Quantum Analytics Dashboard</h3>
-              <p class="project-description">
-                A high-performance real-time intelligence dashboard featuring customized data visualizations, modular card grids, responsive charting, and sub-millisecond dynamic rendering.
-              </p>
-            </div>
-          </article>
-
-          <!-- Project Card 2 -->
-          <article class="project-card glass-panel">
-            <div class="project-image-wrapper">
-              <img src="assets/project-2.png" alt="TaskFlow Collaboration Canvas Screenshot" class="project-image" loading="lazy">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="#" class="project-link-btn" aria-label="View Github Code">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-                      <path d="M9 18c-4.51 2-5-2-7-2"/>
-                    </svg>
-                  </a>
-                  <a href="#" class="project-link-btn" aria-label="Launch Live Site">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">CSS Grid</span>
-                <span class="project-tag">Glassmorphic UI</span>
-                <span class="project-tag">UX Design</span>
-              </div>
-              <h3 class="project-card-title">TaskFlow Canvas</h3>
-              <p class="project-description">
-                A gorgeous, lightweight, and modern SaaS collaboration canvas. Uses a beautiful double-border glass interface, drag-and-drop mechanics, and custom column organization.
-              </p>
-            </div>
-          </article>
-
-          <!-- Project Card 3 -->
-          <article class="project-card glass-panel">
-            <div class="project-image-wrapper">
-              <img src="assets/project-3.png" alt="HomeIQ Control Hub Screenshot" class="project-image" loading="lazy">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="#" class="project-link-btn" aria-label="View Github Code">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-                      <path d="M9 18c-4.51 2-5-2-7-2"/>
-                    </svg>
-                  </a>
-                  <a href="#" class="project-link-btn" aria-label="Launch Live Site">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="project-tag">Adaptive Theme</span>
-                <span class="project-tag">Interactive SVG</span>
-                <span class="project-tag">Automation</span>
-              </div>
-              <h3 class="project-card-title">HomeIQ Automation Hub</h3>
-              <p class="project-description">
-                An interactive smart home terminal providing responsive room mapping layouts, temperature controls, lighting widgets, and comprehensive security details.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tagline">My Capabilities</span>
-          <h2 class="section-title">Technical Expertise</h2>
-          <div class="divider"></div>
-        </div>
-
-        <div class="skills-grid">
-          <!-- Skill Category 1 -->
-          <div class="skills-category glass-panel">
-            <h3 class="category-title">
-              <span class="category-icon">💻</span> Frontend Core
-            </h3>
-            <ul class="skills-list">
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">HTML5 / Semantic web</span>
-                  <span class="skill-percentage">95%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 95%;"></div>
-                </div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Modern CSS3 (Grid/Flex)</span>
-                  <span class="skill-percentage">98%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 98%;"></div>
-                </div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">ES6+ Javascript Core</span>
-                  <span class="skill-percentage">96%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 96%;"></div>
-                </div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">CSS Transitions & Keyframes</span>
-                  <span class="skill-percentage">92%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 92%;"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Skill Category 2 -->
-          <div class="skills-category glass-panel">
-            <h3 class="category-title">
-              <span class="category-icon">⚙️</span> Libraries & Architectures
-            </h3>
-            <ul class="skills-list">
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">React / JSX Ecosystem</span>
-                  <span class="skill-percentage">94%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 94%;"></div>
-                </div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Next.js WebApps</span>
-                  <span class="skill-percentage">90%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 90%;"></div>
-                </div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Node.js / Express Services</span>
-                  <span class="skill-percentage">88%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 88%;"></div>
-                </div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">REST / GraphQL Integration</span>
-                  <span class="skill-percentage">91%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 91%;"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Skill Category 3 -->
-          <div class="skills-category glass-panel">
-            <h3 class="category-title">
-              <span class="category-icon">🛠️</span> Tools & Design Systems
-            </h3>
-            <ul class="skills-list">
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Git & Collaborative Workflow</span>
-                  <span class="skill-percentage">94%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 94%;"></div>
-                </div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Figma Prototyping</span>
-                  <span class="skill-percentage">85%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 85%;"></div>
-                </div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">Chrome DevTools & Auditing</span>
-                  <span class="skill-percentage">95%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 95%;"></div>
-                </div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-info">
-                  <span class="skill-name">CI/CD & Docker Setup</span>
-                  <span class="skill-percentage">82%</span>
-                </div>
-                <div class="skill-bar-wrapper">
-                  <div class="skill-bar" style="--val: 82%;"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tagline">Get in Touch</span>
-          <h2 class="section-title">Let's Create Together</h2>
-          <div class="divider"></div>
-        </div>
-
-        <div class="contact-container">
-          <!-- Contact Info Panel -->
-          <div class="contact-info-panel glass-panel">
-            <h3 class="info-title">Contact Information</h3>
-            <p class="info-desc">Feel free to reach out for project proposals, hiring inquiries, or just to say hello!</p>
             
-            <ul class="contact-details">
-              <li class="detail-item">
-                <span class="detail-icon" aria-hidden="true">✉️</span>
-                <a href="mailto:contact@alexmorgan.dev" class="detail-link">contact@alexmorgan.dev</a>
+            <div class="briefing-visual">
+              <div class="visual-panel">
+                <img src="assets/project-1.png" alt="Quantum Analytics UI dashboard interface capture" class="visual-img" loading="lazy">
+              </div>
+            </div>
+          </article>
+
+          <!-- Intelligence Briefing 2 -->
+          <article class="briefing-item reverse">
+            <div class="briefing-meta">
+              <div class="briefing-num">03.2 / Protocol</div>
+              <h3 class="briefing-title">TaskFlow Canvas</h3>
+              <p class="briefing-subtitle">Collaborative Product Planning System</p>
+              
+              <div class="briefing-details">
+                <div class="detail-row">
+                  <span class="detail-label">Intent</span>
+                  <span class="detail-value">Eliminate interface noise from real-time coordinate collaborative boards.</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Infrastructure</span>
+                  <span class="detail-value">Spatial coordinate listeners, CSS grid structural columns, lightweight WebSockets.</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Perception</span>
+                  <span class="detail-value">Restrained double-border panel layout with absolute typographic priority.</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Outcome</span>
+                  <span class="detail-value">Adopted by 40+ engineering groups; state synchronization latency stays below 10ms.</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="briefing-visual">
+              <div class="visual-panel">
+                <img src="assets/project-2.png" alt="TaskFlow Canvas browser interface screenshot" class="visual-img" loading="lazy">
+              </div>
+            </div>
+          </article>
+
+          <!-- Intelligence Briefing 3 -->
+          <article class="briefing-item">
+            <div class="briefing-meta">
+              <div class="briefing-num">03.3 / Telemetry</div>
+              <h3 class="briefing-title">HomeIQ Automation</h3>
+              <p class="briefing-subtitle">Tactile Hardware Control Interface</p>
+              
+              <div class="briefing-details">
+                <div class="detail-row">
+                  <span class="detail-label">Intent</span>
+                  <span class="detail-value">Abstract physical smart home controllers under a unified, high-contrast dashboard.</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Infrastructure</span>
+                  <span class="detail-value">Hardware telemetry bridges, event handlers, monochromatic dashboard maps.</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Perception</span>
+                  <span class="detail-value">High-status tactical interfaces mimicking mechanical consoles and panels.</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Outcome</span>
+                  <span class="detail-value">Zero-configuration hardware mapping; local command dispatch matches 5ms.</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="briefing-visual">
+              <div class="visual-panel">
+                <img src="assets/project-3.png" alt="HomeIQ Control Terminal widget panels screenshot" class="visual-img" loading="lazy">
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 / Intel (Skills Overhauled into Clean Typography lists) -->
+    <section id="skills" class="intel-section">
+      <div class="container">
+        <div class="asymmetric-header">
+          <span class="section-num">04 / Intel</span>
+          <h2 class="section-title font-serif">System Capabilities</h2>
+          <p class="section-intro">
+            A comprehensive overview of tools, environments, and branding paradigms mastered to guarantee absolute digital velocity.
+          </p>
+        </div>
+
+        <div class="intel-grid">
+          
+          <div class="intel-column">
+            <h3 class="intel-title">Engineering Core</h3>
+            <ul class="intel-list">
+              <li class="intel-item">
+                <span class="intel-name">Semantic HTML5 & Accessibility (a11y)</span>
+                <span class="intel-tag">Standard-Setting</span>
               </li>
-              <li class="detail-item">
-                <span class="detail-icon" aria-hidden="true">📍</span>
-                <span class="detail-text">San Francisco, California</span>
+              <li class="intel-item">
+                <span class="intel-name">Modern CSS Layouts (Grid, Flex, variables)</span>
+                <span class="intel-tag">Advanced</span>
+              </li>
+              <li class="intel-item">
+                <span class="intel-name">Vanilla ES6+ JavaScript Core Systems</span>
+                <span class="intel-tag">Production-Hardened</span>
+              </li>
+              <li class="intel-item">
+                <span class="intel-name">Performance Optimization (CWV, LCP, INP)</span>
+                <span class="intel-tag">Telemetry-Driven</span>
               </li>
             </ul>
+          </div>
 
-            <div class="social-links-wrapper">
-              <h4 class="social-title">Follow Me</h4>
-              <div class="social-links">
-                <a href="#" class="social-link-btn" aria-label="LinkedIn Profile">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
-                    <circle cx="4" cy="4" r="2"/>
-                  </svg>
-                </a>
-                <a href="#" class="social-link-btn" aria-label="GitHub Profile">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-                    <path d="M9 18c-4.51 2-5-2-7-2"/>
-                  </svg>
-                </a>
-                <a href="#" class="social-link-btn" aria-label="Twitter / X Profile">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
-                  </svg>
-                </a>
+          <div class="intel-column">
+            <h3 class="intel-title">Frameworks & Integrations</h3>
+            <ul class="intel-list">
+              <li class="intel-item">
+                <span class="intel-name">React Ecosystem & JSX Patterns</span>
+                <span class="intel-tag">Senior-Level</span>
+              </li>
+              <li class="intel-item">
+                <span class="intel-name">Next.js Framework Platforms</span>
+                <span class="intel-tag">Architecture-Centric</span>
+              </li>
+              <li class="intel-item">
+                <span class="intel-name">Node.js Serverless Microservices</span>
+                <span class="intel-tag">Scale-Optimized</span>
+              </li>
+              <li class="intel-item">
+                <span class="intel-name">REST / GraphQL API Orchestration</span>
+                <span class="intel-tag">Clean Specs</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="intel-column">
+            <h3 class="intel-title">Growth & Brand Systems</h3>
+            <ul class="intel-list">
+              <li class="intel-item">
+                <span class="intel-name">Interface Psychology & Visual Grids</span>
+                <span class="intel-tag">Brand-First</span>
+              </li>
+              <li class="intel-item">
+                <span class="intel-name">Git Collaboration & Branch Architectures</span>
+                <span class="intel-tag">Deterministic</span>
+              </li>
+              <li class="intel-item">
+                <span class="intel-name">CI/CD Pipelines & Operational Automations</span>
+                <span class="intel-tag">Velocity-Oriented</span>
+              </li>
+              <li class="intel-item">
+                <span class="intel-name">Figma Architecture & Prototyping Systems</span>
+                <span class="intel-tag">Design-Native</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 / Connect (Contact) -->
+    <section id="contact" class="connect-section">
+      <div class="container connect-layout">
+        
+        <div class="connect-brief">
+          <div class="asymmetric-header">
+            <span class="section-num">05 / Connect</span>
+            <h2 class="section-title font-serif">Initiate Connection</h2>
+            <p class="section-intro">
+              For systems architecture, product advisory, or brand direction. I operate in highly intentional sprint cycles.
+            </p>
+          </div>
+          
+          <div class="connect-links">
+            <div class="connect-link-row">
+              <span class="connect-label">Secure Mail</span>
+              <a href="mailto:contact@alexmorgan.dev" class="connect-value">contact@alexmorgan.dev</a>
+            </div>
+            <div class="connect-link-row">
+              <span class="connect-label">Systems Base</span>
+              <span class="connect-value">San Francisco, CA</span>
+            </div>
+            <div class="connect-link-row">
+              <span class="connect-label">Network Directory</span>
+              <div class="social-tags">
+                <a href="#" class="social-tag-link" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="#" class="social-tag-link" aria-label="GitHub Profile">GitHub</a>
+                <a href="#" class="social-tag-link" aria-label="Twitter Profile">Twitter</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Contact Form Panel -->
-          <form id="contact-form" class="contact-form glass-panel" action="https://formspree.io/f/placeholder" method="POST" novalidate>
-            <h3 class="form-title">Send a Message</h3>
-            
-            <div class="form-group">
-              <input type="text" id="form-name" name="name" class="form-control" placeholder=" " required minlength="2">
-              <label for="form-name" class="form-label">Full Name</label>
-              <span class="field-error-msg">Please enter a valid name (min 2 chars).</span>
+        <div class="connect-form-panel">
+          <form id="contact-form" class="connect-form" action="https://formspree.io/f/placeholder" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="form-name" name="name" class="form-input" placeholder=" " required minlength="2">
+                <label for="form-name" class="form-label">Identity</label>
+                <span class="error-text">Enter a valid identifier.</span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="form-email" name="email" class="form-input" placeholder=" " required>
+                <label for="form-email" class="form-label">Digital Address</label>
+                <span class="error-text">Provide a valid routing email.</span>
+              </div>
             </div>
 
             <div class="form-group">
-              <input type="email" id="form-email" name="email" class="form-control" placeholder=" " required>
-              <label for="form-email" class="form-label">Email Address</label>
-              <span class="field-error-msg">Please enter a valid email address.</span>
+              <textarea id="form-message" name="message" class="form-input textarea" placeholder=" " required minlength="10"></textarea>
+              <label for="form-message" class="form-label">Operational Intent</label>
+              <span class="error-text">Please provide details of your project (min 10 characters).</span>
             </div>
 
-            <div class="form-group">
-              <textarea id="form-message" name="message" class="form-control textarea" placeholder=" " required minlength="10"></textarea>
-              <label for="form-message" class="form-label">Your Message</label>
-              <span class="field-error-msg">Please write a message of at least 10 characters.</span>
-            </div>
-
-            <button type="submit" class="btn btn-primary form-submit-btn">
-              <span class="btn-text">Send Message</span>
-              <svg class="spinner" viewBox="0 0 50 50" aria-hidden="true">
-                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+            <button type="submit" class="submit-btn">
+              <span class="btn-label">Transmit Query</span>
+              <svg class="submit-spinner" viewBox="0 0 50 50" aria-hidden="true">
+                <circle class="spinner-path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
               </svg>
             </button>
 
-            <!-- Status Toasts / Banners -->
-            <div id="form-success-banner" class="form-banner banner-success" role="alert" aria-hidden="true">
-              <span class="banner-icon">✓</span>
-              <div class="banner-content">
-                <strong>Success!</strong> Your message has been sent successfully.
-              </div>
+            <!-- Inline Toasts -->
+            <div id="form-success-banner" class="status-banner success" role="alert" aria-hidden="true">
+              <span class="status-indicator">●</span>
+              <span class="status-text">Transmission successful. Verification logged.</span>
             </div>
-            <div id="form-error-banner" class="form-banner banner-error" role="alert" aria-hidden="true">
-              <span class="banner-icon">✗</span>
-              <div class="banner-content">
-                <strong>Error!</strong> An error occurred. Please try again.
-              </div>
+            <div id="form-error-banner" class="status-banner error" role="alert" aria-hidden="true">
+              <span class="status-indicator">●</span>
+              <span class="status-text">Transmission failed. Check parameters and retry.</span>
             </div>
           </form>
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="footer-area">
-    <div class="container footer-container">
+  <!-- Muted Architectural Footer -->
+  <footer class="footer">
+    <div class="container footer-layout">
       <div class="footer-brand">
-        <span class="footer-logo">⚡ Alex.dev</span>
-        <p class="footer-motto">Merging engineering efficiency with digital artwork.</p>
+        <span class="footer-logo">⚡ morgan.sys</span>
+        <p class="footer-tagline">Operator grade digital identity. Minimal design, physical stability.</p>
       </div>
-      <div class="footer-copy">
-        <p>&copy; 2026 Alex Morgan. Built with standard-setting modern HTML5, CSS3, & JS.</p>
+      <div class="footer-meta">
+        <p>&copy; 2026 Alex Morgan. Built for internet perception.</p>
       </div>
     </div>
   </footer>
 
-  <!-- External Script -->
   <script src="script.js"></script>
 </body>
 </html>
